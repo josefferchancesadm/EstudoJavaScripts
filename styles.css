@@ -1,0 +1,188 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  font-weight: normal;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  color: rgb(22, 22, 22);
+  scroll-behavior: smooth;
+}
+body {
+  /* background: linear-gradient(
+    135deg,
+    rgb(13, 1, 70),
+    rgb(3, 51, 77),
+    blue,
+    rgb(62, 62, 245),
+    transparent
+  ); */
+  background-color: rgb(16, 16, 162);
+}
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  width: 100%;
+}
+.navbar {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #fff;
+  width: 80%;
+  height: 80px;
+  background: linear-gradient(45deg, rgb(2, 2, 52), transparent);
+  padding: 10px 20px;
+  border-bottom: 2px solid rgb(123, 94, 255);
+  border-left: 2px solid rgb(123, 94, 255);
+  border-right: 2px solid rgb(123, 94, 255);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 2px 2px 6px rgb(24, 23, 23);
+  z-index: 1000;
+}
+.btn {
+  width: 120px;
+  height: 35px;
+  background: darkblue;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.btn:hover {
+  background-color: transparent;
+  border: solid darkblue 2px;
+  transform: translate(5px, 5px);
+  color: darkblue;
+  box-shadow: 1px 1px 2px blue, 2px 2px 6px blue, 3px 3px 8px blue;
+}
+.navbar .logo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: darkblue ; */
+  width: 30%;
+  height: 80%;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  transition: 0.5s all;
+}
+.navbar .logo:hover {
+  transform: translate(5px, 5px);
+  text-shadow: 2px 2px 6px rgb(64, 64, 246), 4px 4px 8px rgb(92, 92, 247);
+}
+.navbar .logo a {
+  color: aqua;
+  letter-spacing: 5px;
+  font-size: 3rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif,
+    Courier, monospace;
+  text-shadow: 1px 1px 4px rgb(157, 211, 255);
+}
+.navbar .logo span {
+  color: #fff;
+  letter-spacing: 5px;
+  font-size: 2rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif,
+    Courier, monospace;
+  text-shadow: 1px 1px 4px rgb(157, 211, 255);
+}
+.navbar .nav {
+  padding: 10px 0;
+}
+.navbar .nav ul li {
+  display: inline-block;
+}
+.navbar .nav ul li a {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 900;
+  padding: 0 20px;
+  letter-spacing: 3px;
+  transition: 0.5s all;
+}
+.navbar .nav ul li a:hover {
+  color: rgb(249, 125, 125);
+  text-shadow: 2px 2px 6px rgb(64, 64, 246), 4px 4px 8px rgb(92, 92, 247);
+}
+.posts {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: #fff;
+  width: 80%;
+  min-height: 100%;
+  gap: 20px;
+  background: linear-gradient(185deg, rgb(2, 2, 52), transparent);
+  padding: 10px 20px;
+  top: 110px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 2px 2px 6px rgb(24, 23, 23);
+}
+.posts .post {
+  position: relative;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #dbe8e9;
+  width: 300px;
+  height: 360px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 6px rgb(24, 23, 23);
+  padding: 10px;
+  border: 2px solid #fff;
+  transition: 0.5s all;
+}
+.posts .post:hover {
+  transform: translate(5px, 5px);
+  box-shadow: 2px 2px 6px blue, 4px 4px 8px rgb(41, 41, 255),
+    8px 8px 12px rgb(104, 104, 255);
+  cursor: pointer;
+}
+.posts .post::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: darkblue;
+  border-radius: 10px;
+  z-index: 0;
+  box-shadow: 0px 2px 4px #111;
+}
+.posts .post h2 {
+  font-size: 1.5rem;
+  padding-bottom: 20px;
+  font-weight: 600;
+  z-index: 1;
+  color: #fff;
+}
+.posts .post h6 {
+  font-size: 1.1rem;
+  padding-bottom: 15px;
+  font-weight: 600;
+}
+.posts .post p {
+  font-size: 1rem;
+  padding-bottom: 25px;
+  text-align: justify;
+}
