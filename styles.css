@@ -61,21 +61,21 @@ body {
   transition: 0.5s;
 }
 .btn:hover {
-  background-color: transparent;
-  border: solid darkblue 2px;
+  /* background-color: transparent; */
+  border: solid rgb(57, 180, 252) 2px;
   transform: translate(1px, 1px);
-  color: darkblue;
+  color: #59b6e3;
   box-shadow: 1px 1px 2px blue, 2px 2px 6px blue, 3px 3px 8px blue;
 }
 .btnDel {
   width: 120px;
   height: 35px;
   background: transparent;
-  color: red;
+  color: rgb(236, 19, 19);
   font-weight: 600;
   border-radius: 10px;
   cursor: pointer;
-  border: solid 2px red;
+  border: solid 2px rgb(230, 19, 19);
   transition: 0.5s;
 }
 .navbar .logo {
@@ -92,7 +92,7 @@ body {
   transition: 0.5s all;
 }
 .navbar .logo:hover {
-  transform: translate(5px, 5px);
+  transform: translate(3px, 3px);
   text-shadow: 2px 2px 6px rgb(64, 64, 246), 4px 4px 8px rgb(92, 92, 247);
 }
 .navbar .logo a {
@@ -102,6 +102,9 @@ body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif,
     Courier, monospace;
   text-shadow: 1px 1px 4px rgb(157, 211, 255);
+}
+.navbar .logo a:hover{
+  color: rgb(249, 125, 125);
 }
 .navbar .logo span {
   color: #fff;
@@ -137,7 +140,7 @@ body {
   flex-wrap: wrap;
   color: #fff;
   width: 80%;
-  min-height: 100%;
+  height: 100vh;
   gap: 20px;
   background: linear-gradient(185deg, rgb(2, 2, 52), transparent);
   padding: 10px 20px;
@@ -154,8 +157,8 @@ body {
   align-items: center;
   flex-wrap: wrap;
   background: #dbe8e9;
-  width: 300px;
-  height: 360px;
+  width: 400px;
+  height: 400px;
   border-radius: 10px;
   box-shadow: 2px 2px 6px rgb(24, 23, 23);
   padding: 10px;
@@ -163,9 +166,9 @@ body {
   transition: 0.5s all;
 }
 .posts .post:hover {
-  transform: translate(5px, 5px);
-  box-shadow: 2px 2px 6px blue, 4px 4px 8px rgb(41, 41, 255),
-    8px 8px 12px rgb(104, 104, 255);
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 4px blue, 3px 3px 6px rgb(41, 41, 255),
+    6px 6px 8px rgb(104, 104, 255);
   cursor: pointer;
 }
 .posts .post::after {
@@ -196,4 +199,71 @@ body {
   font-size: 1rem;
   padding-bottom: 25px;
   text-align: justify;
+}
+.formEdit{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  top: 1%;
+  width: 80vw;
+  height: 98vh;
+  background: rgba(1,1,1,0.95);
+  z-index: 9999;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px #111;
+  border: solid 1px #111;
+}
+.formEdit.visible{
+  display: none;
+}
+.formEdit .container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;  
+  width: 100%;  
+  border-radius: 10px;  
+}
+.formEdit .container .titulo{
+  position: absolute;
+  top: 1%;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: rgb(5, 5, 83);
+  border-radius: 10px;
+}
+.formEdit .container .titulo h2{
+  font-size: 1.7rem;
+  color: #fff;
+  font-weight: 900;
+  text-align: center;
+  padding: 5px;
+  text-shadow: 0px 1px 2px #111, 0px 2px 4px rgb(22, 255, 255);  
+}
+.formEdit .container .form{  
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 85%;
+  background: rgba(0, 0, 255, 0.37);
+  border-radius: 10px;
+}
+.formEdit .container .botoes{  
+  position: absolute;
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 6%;
+  bottom: 11px;
+  background-color: rgb(5, 5, 83);
+  border-radius: 10px;
 }

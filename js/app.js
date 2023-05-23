@@ -1,12 +1,7 @@
 import { posts } from "./database.js";
 import { postClass } from "./post.js";
 
-// const btn = document.getElementById("add");
-// // console.log(btn)
-
-// btn.addEventListener("click", () => {
-//   addPost();
-// });
+let arrayPosts = posts;
 
 //Metodos para adicionar um novo post
 function addPost() {
@@ -15,19 +10,22 @@ function addPost() {
   postNew.Descricao = "New Post 01";
   postNew.Data = "01/06/2024";
   postNew.texto = "Vamos adicinor um novo post 01";
-  // console.log(postNew);
-  posts.push(postNew);
+  //console.log(postNew);
+  arrayPosts.push(postNew);
   listarPosts();
 }
 
-function deletePost(event) {
-  console.log(event);
+function deletePost(index) { 
+  arrayPosts = arrayPosts.filter((values, id) => {
+    return id !== index;
+  });
+  listarPosts();
 }
 
 function listarPosts() {
   // Cria o template dos posts Dinamicos
   let templatePost = "";
-  posts.forEach((post) => {
+  arrayPosts.forEach((post) => {
     templatePost += `
   
       <div class="post">
@@ -58,9 +56,9 @@ function listarPosts() {
 
   //Carrega os seletores dos botões de excluir post e coloca os eventos onclick addPost() nos botões
   const btnsDel = document.querySelectorAll(".btnDel");
-  btnsDel.forEach((btnDel) => {
-    btnDel.addEventListener("click", (event) => {
-      deletePost(event);
+  btnsDel.forEach((btnDel, index) => {
+    btnDel.addEventListener("click", () => {
+      deletePost(index);
     });
   });
 }

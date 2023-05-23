@@ -13,11 +13,4 @@ export const posts = [
     texto:
       "Post 2 ipsum dolor sit amet consectetur adipisicing elit. Eum, unde sit. Tempore nobis cumque quidem dolore blanditiis provident quisquam, omnis possimus voluptas hic excepturi architecto facilis quas a explicabo ullam.",
   },
-  {
-    Titulo: "Post 3",
-    Descricao: "Exemplo Post 3",
-    Data: "01/03/2023",
-    texto:
-      "Post 3 ipsum dolor sit amet consectetur adipisicing elit. Eum, unde sit. Tempore nobis cumque quidem dolore blanditiis provident quisquam, omnis possimus voluptas hic excepturi architecto facilis quas a explicabo ullam.",
-  },
 ];

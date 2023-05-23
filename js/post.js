@@ -1,10 +1,8 @@
 export class postClass {
   constructor(titulo, descricao, data, texto) {
-    this.titulo = titulo;
-    this.descricao = descricao;
-    this.data = data;
-    this.texto = texto;
+    this._titulo = titulo;
+    this._descricao = descricao;
+    this._data = data;
+    this._texto = texto;
   }
-
-
 }
